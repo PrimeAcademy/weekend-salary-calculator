@@ -1,4 +1,39 @@
 body {
     background-color: #f1faee;
     font-family: 'Roboto Mono', sans-serif;
+    color: #1d3557;
+}
+
+#main-form {
+    text-align: center;
+}
+
+#info-form {
+    display: flex;
+    border: 2px solid #1d3557;
+    flex-direction: column;
+    align-items: centers;
+    width: 50%;
+    margin: auto;
+    padding: 2rem 0;
+    row-gap: 1rem;
+}
+
+button {
+    font-family: 'Roboto Mono', sans-serif;
+    color: #1d3557;
+    background-color: #a8dadc;
+    border: 0px solid;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #1d3557;
+    color: #a8dadc;
+}
+
+input {
+    font-family: 'Roboto Mono', sans-serif;
+    color: #1d3557;
 }
