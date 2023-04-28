@@ -22,7 +22,11 @@ function collectInfo(event) {
 
     //Displaying total costs
     totalCosts += Number(annualSalary);
-    document.querySelector('#total-costs').innerHTML = `$${totalCosts}`;
+    document.querySelector('#total-costs').innerHTML = `Total Costs: $${totalCosts}`;
+
+    if(totalCosts > 10000) {
+        document.querySelector('#total-costs').style.backgroundColor = 'red';
+    }
 
     //Reset
     document.querySelector("#info-form").reset();
