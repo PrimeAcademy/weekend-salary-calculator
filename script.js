@@ -17,11 +17,10 @@ function collectInfo(event) {
     //Appending to the DOM
     document.querySelector('#new-info').innerHTML += 
     `<div>
-        <span>${newEmployee.firstName}</span>
-        <span>${newEmployee.lastName}</span>
-        <span>${newEmployee.idNum}</span>
-        <span>${newEmployee.jobTitle}</span>
-        <span>$${newEmployee.annualSalary}</span>
+        <span><b>Name:</b> ${newEmployee.firstName} ${newEmployee.lastName}</span>
+        <span><b>ID Number:</b> ${newEmployee.idNum}</span>
+        <span><b>Job Title:</b> ${newEmployee.jobTitle}</span>
+        <span><b>Salary:</b> $${newEmployee.annualSalary}</span>
         <button onClick="deleteMe(event)">Delete</button>
     </div>`
 
