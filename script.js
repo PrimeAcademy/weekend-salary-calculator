@@ -15,13 +15,16 @@ function collectInfo(event) {
     let arrayOfInfo = [];
     arrayOfInfo.push(firstName, lastName, idNum, jobTitle, annualSalary);
 
-    //Appending to the DOM;
+    //Appending variables to the DOM;
     for (let item of arrayOfInfo) {
         document.querySelector('#new-info').innerHTML += `<div>${item}</div>`
     }
 
     //Displaying total costs
     totalCosts += Number(annualSalary);
-    document.querySelector('#total-costs').innerHTML += `$${totalCosts}`;
+    document.querySelector('#total-costs').innerHTML = `$${totalCosts}`;
+
+    //Reset
+    document.querySelector("#info-form").reset();
 }
 
