@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
+    <section>
         <h1>Employee Information</h1>
-        <form action="">
+        <form id="infoForm" action="">
             <div>
                 <label for="first-name">First name: </label>
                 <input type="text" name="first-name" id="first-name">
@@ -21,7 +21,7 @@
             </div>
             <div>
                 <label for="ID-number">ID number: </label>
-                <input type="text" name="ID-number" id="ID-number">
+                <input type="number" name="ID-number" id="ID-number">
             </div>
             <div>
                 <label for="job-title">Job title: </label>
@@ -29,16 +29,17 @@
             </div>
             <div>
                 <label for="annual-salary">Annual salary: </label>
-                <input type="text" name="annual-salary" id="annual-salary">
+                <input type="number" name="annual-salary" id="annual-salary">
             </div>
             <div>
                 <button onClick="collectInfo(event)">Submit</button>
             </div>
         </form>
-    </main>
-    <div id="new-info">
+        <h2 id="total-costs">Total Costs: </h2>
+    </section>
+    <section id="new-info">
 
-    </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

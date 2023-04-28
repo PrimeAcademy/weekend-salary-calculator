@@ -1,5 +1,7 @@
 console.log('script running!');
 
+let totalCosts = 0;
+
 function collectInfo(event) {
     event.preventDefault();
     //Defining variables
@@ -17,4 +19,9 @@ function collectInfo(event) {
     for (let item of arrayOfInfo) {
         document.querySelector('#new-info').innerHTML += `<div>${item}</div>`
     }
+
+    //Displaying total costs
+    totalCosts += Number(annualSalary);
+    document.querySelector('#total-costs').innerHTML += `$${totalCosts}`;
 }
+
