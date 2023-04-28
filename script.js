@@ -1,6 +1,7 @@
 console.log('script running!');
 
 let totalCosts = 0;
+let monthlyCosts = 0;
 
 function collectInfo(event) {
     event.preventDefault();
@@ -20,15 +21,16 @@ function collectInfo(event) {
         <span><b>Name:</b> ${newEmployee.firstName} ${newEmployee.lastName}</span>
         <span><b>ID Number:</b> ${newEmployee.idNum}</span>
         <span><b>Job Title:</b> ${newEmployee.jobTitle}</span>
-        <span><b>Salary:</b> $${newEmployee.annualSalary}</span>
+        <span><b>Annual Salary:</b> $${newEmployee.annualSalary}</span>
         <button onClick="deleteMe(event)">Delete</button>
     </div>`
 
     // Displaying total costs
     totalCosts += Number(newEmployee.annualSalary);
-    document.querySelector('#total-costs').innerHTML = `Total Costs: $${totalCosts}`;
+    monthlyCosts = (totalCosts/12).toFixed(2);
+    document.querySelector('#total-costs').innerHTML = `Total Monthly Expenditure: $${monthlyCosts}`;
 
-    if(totalCosts > 20000) {
+    if(monthlyCosts > 20000) {
         document.querySelector('#total-costs').style.backgroundColor = '#e63946';
     }
 
