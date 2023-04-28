@@ -14,8 +14,6 @@ function collectInfo(event) {
         annualSalary: document.querySelector('#annual-salary').value
     }
 
-    console.log(newEmployee);
-
     //Appending to the DOM
     document.querySelector('#new-info').innerHTML += 
     `<div>
@@ -39,3 +37,6 @@ function collectInfo(event) {
     document.querySelector("#info-form").reset();
 }
 
+function deleteMe(event) {
+    event.target.parentElement.remove();
+}
