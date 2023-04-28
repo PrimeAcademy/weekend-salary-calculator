@@ -30,7 +30,7 @@ function collectInfo(event) {
     document.querySelector('#total-costs').innerHTML = `Total Costs: $${totalCosts}`;
 
     if(totalCosts > 20000) {
-        document.querySelector('#total-costs').style.backgroundColor = 'red';
+        document.querySelector('#total-costs').style.backgroundColor = '#e63946';
     }
 
     //Reset
