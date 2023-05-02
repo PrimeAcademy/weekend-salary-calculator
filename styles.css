@@ -13,6 +13,7 @@ td {
     padding: 8px;
 }
 
-#total-monthly ::before {
-    content:"$";
+.red-background {
+    background-color: red;
 }
+
