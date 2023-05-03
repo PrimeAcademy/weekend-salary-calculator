@@ -21,11 +21,22 @@
             <input id="AnnualSalary-input" type="number" placeholder=" Annual Salary"/><br />
             <button id= "Submit-Button" type= "submit">Submit</button>
         </form>
-
-        
-
-
+        <table id = "customers">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID Number</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                    <td>Monthly Salary</td>
+                    <td><button class="deleteButton" onClick="deleteEntry(event)">Delete</button></td>
+                </tr>
+            </thead>
+        </table>
 
     </div>
+    <script src="client.js"></script>
 </body>
+
 </html>
