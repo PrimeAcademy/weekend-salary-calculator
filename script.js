@@ -17,13 +17,14 @@ function collectInfo(event) {
 
     //Appending to the DOM
     document.querySelector('#new-info').innerHTML += 
-    `<div>
-        <span><b>Name:</b> ${newEmployee.firstName} ${newEmployee.lastName}</span>
-        <span><b>ID Number:</b> ${newEmployee.idNum}</span>
-        <span><b>Job Title:</b> ${newEmployee.jobTitle}</span>
-        <span><b>Annual Salary:</b> $${newEmployee.annualSalary}</span>
-        <button onClick="deleteMe(event)">Delete</button>
-    </div>`
+        `<tr>
+            <td>${newEmployee.firstName}</td>
+            <td>${newEmployee.lastName}</td>
+            <td>${newEmployee.idNum}</td>
+            <td>${newEmployee.jobTitle}</td>
+            <td>${newEmployee.annualSalary}</td>
+            <td><button id='delete-button' onClick='deleteMe(event)'>Delete</button></td>
+        </tr>`
 
     // Displaying total costs
     totalCosts += Number(newEmployee.annualSalary);
@@ -39,5 +40,5 @@ function collectInfo(event) {
 }
 
 function deleteMe(event) {
-    event.target.parentElement.remove();
+    event.target.parentElement.parentElement.remove();
 }
