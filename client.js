@@ -10,13 +10,18 @@ function submitForm(event) {
     // Stop the page from refreshing
     event.preventDefault();
 };
+function submit(event) {
+event.preventDefault();
+
 
 let firstName = document.querySelector('#FirstName-input').value;
 let lastName = document.querySelector('#LastName-input').value;
 let iDNumber = Number(document.querySelector('#IdNumber-input').value);
 let jobTitle= document.querySelector('#JobTitle-input').value;
 let annualSalary = Number(document.querySelector('#AnnualSalary-input').value);
-let submitbutton = document.querySelector('#Submit-Button');
+
+
+
 
 let monthlySalary = annualSalary / 12;
 let customers = document.querySelector('#customers')
@@ -27,8 +32,8 @@ customers.innerHTML +=
         <td>${iDNumber}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
-        <td>${MonthlySalary}</td>
-        <td><button class= "deleteButton onClick="deleteEntry(event)>Delete</button></td>
+        <td>${monthlySalary}</td>
+    
     </tr>` ;
 
 
@@ -41,3 +46,7 @@ customers.innerHTML +=
     }
     salaryArray.push(theNewEntry)
 
+
+}
+let submitbutton = document.querySelector('#Submit-Button');
+submitbutton.addEventListener('click', submit);
