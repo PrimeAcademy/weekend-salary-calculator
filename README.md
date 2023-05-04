@@ -11,8 +11,8 @@ We were asked to calculate total monthly expenditure. To calculate this, each em
 
 ## Screen Shot
 
-![screenshot of salary calculator](screenshots/salary-calc1.png "Screenshot of Salary Calculator")
-![screenshot of salary calculator](screenshots/salary-calc2.png "Screenshot of Salary Calculator")
+![screenshot of salary calculator](Public/screenshots/salary-calc1.png "Screenshot of Salary Calculator")
+![screenshot of salary calculator](Public/screenshots/salary-calc2.png "Screenshot of Salary Calculator")
 
 ### Prerequisites
 
