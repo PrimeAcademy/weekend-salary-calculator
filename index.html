@@ -28,13 +28,14 @@
             <input type="text" id="annual-salary" placeholder="Annual Salary" />
             <button onclick="submitEmployee(event)">Submit</button>
             <table id="employees">
-            <thead>
+            <thead id="labels">
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>ID</th>
                     <th>Title</th>
                     <th>Annual Salary</th>
+                    <th>Remove</th>
                 </tr>
             </thead>
             <tbody id="employeeData">
@@ -42,7 +43,7 @@
             </tbody>
         </table>
         <div>
-            <h3>Total Monthly: <span id="total-monthly">0</span></h3>
+            <h3>Total Monthly: <span id="total-monthly">$0.00</span></h3>
         </div>
         </div>
     </div>

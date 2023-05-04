@@ -1,6 +1,6 @@
 header {
  text-align: center;
- background-color: grey;
+ background-color: #c1c1f5;
 }
 
 table {
@@ -17,3 +17,15 @@ td {
     background-color: red;
 }
 
+table, th, td {
+    border: 2px solid;
+    text-align: center;
+}
+
+#labels {
+    background-color: #c1c1f5;
+}
+
+#employeeData {
+    background-color: lavender;
+}

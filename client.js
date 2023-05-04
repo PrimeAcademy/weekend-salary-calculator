@@ -25,7 +25,7 @@ function submitEmployee(event) {
         <td>${lastNameVal}</td>
         <td>${IDVal}</td>
         <td>${titleVal}</td>
-        <td class='total'>${annualSalaryVal.toLocaleString("en-US", {style:"currency", currency:"USD"})}</td>
+        <td class='total'>${annualSalaryVal}</td>
         <td><button onclick="deleteEmployee(this)" class="delete-employee">Delete</button></td>
     </tr>
     `
@@ -74,8 +74,10 @@ function totalMonthly() {
 
 // X add element for total monthly cost
 // X calculate monthly costs from all employees - run when submitted
-// change background of monthly cost to red if total cost exceeds $20k
+// X change background of monthly cost to red if total cost exceeds $20k
 // clear input fields upon submit - each input is an object, target element set value to empty string
 // make 'enter' submit input field - wrap input/labels in a form element 'submit' and change 'onclick' to 'onsubmit'
 // STRETCH add styling
 // X STRETCH when employee is deleted updated total monthly cost to reflect - similar to finding total - on delete run a function to re-tally total
+// library.format string.replace 
+// Number(string.replace(/[^0-9.]+/g, '')); Number(string);
