@@ -1,7 +1,7 @@
 console.log("Hello World")
 
 let salaryArray = [];
-let MonthlyCost = 0;
+let monthlyCost = 0;
 
 
 
@@ -20,11 +20,18 @@ let iDNumber = Number(document.querySelector('#IdNumber-input').value);
 let jobTitle= document.querySelector('#JobTitle-input').value;
 let annualSalary = Number(document.querySelector('#AnnualSalary-input').value);
 
+let monthlyTotal = annualSalary /12
+monthlyCost += monthlyTotal
+// monthlyCost += annualSalary / 12
+let monthlyColorElement = document.querySelector("#monthlyTotal");
+if(monthlyCost > 20000) {
+  monthlyColorElement.style.backgroundColor = "red";
+}
+monthlyColorElement.innerText = monthlyCost;
+
+// let customers = document.querySelector('#customers')
 
 
-
-let monthlySalary = annualSalary / 12;
-let customers = document.querySelector('#customers')
 customers.innerHTML += 
    ` <tr>
         <td>${firstName}</td>
@@ -32,21 +39,30 @@ customers.innerHTML +=
         <td>${iDNumber}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
-        <td>${monthlySalary}</td>
-    
+  
+        <td><button onClick="deleteEntry(event)">Delete</button></td>
     </tr>` ;
 
+ salaryArray.push(annualSalary);
+    // let theNewEntry = {
+    //     first: firstName,
+    //     last: lastName,
+    //     id: iDNumber,
+    //     job: jobTitle,
+    //     salary: annualSalary
+    // }
+   
 
-    let theNewEntry = {
-        first: firstName,
-        last: lastName,
-        id: iDNumber,
-        job: jobTitle,
-        salary: annualSalary
-    }
-    salaryArray.push(theNewEntry)
-
-
-}
+};
 let submitbutton = document.querySelector('#Submit-Button');
 submitbutton.addEventListener('click', submit);
+
+//  let monthlyTotalElement= document.getElementById("monthlyTotal");
+// if(monthlyCost > 20000) {
+//        monthlyTotalElement.style.backgroundColor = "red";
+
+
+function deleteEntery(event) {
+
+}     
+//  <td>${monthlyCost}</td>
