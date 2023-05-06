@@ -22,14 +22,14 @@ let annualSalary = Number(document.querySelector('#AnnualSalary-input').value);
 
 let monthlyTotal = annualSalary /12
 monthlyCost += monthlyTotal
-// monthlyCost += annualSalary / 12
+
 let monthlyColorElement = document.querySelector("#monthlyTotal");
 if(monthlyCost > 20000) {
   monthlyColorElement.style.backgroundColor = "red";
 }
 monthlyColorElement.innerText = monthlyCost;
 
-// let customers = document.querySelector('#customers')
+
 
 
 customers.innerHTML += 
@@ -39,30 +39,19 @@ customers.innerHTML +=
         <td>${iDNumber}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
-  
         <td><button onClick="deleteEntry(event)">Delete</button></td>
     </tr>` ;
 
  salaryArray.push(annualSalary);
-    // let theNewEntry = {
-    //     first: firstName,
-    //     last: lastName,
-    //     id: iDNumber,
-    //     job: jobTitle,
-    //     salary: annualSalary
-    // }
+   
    
 
 };
 let submitbutton = document.querySelector('#Submit-Button');
 submitbutton.addEventListener('click', submit);
 
-//  let monthlyTotalElement= document.getElementById("monthlyTotal");
-// if(monthlyCost > 20000) {
-//        monthlyTotalElement.style.backgroundColor = "red";
 
-
-function deleteEntery(event) {
-
+function deleteEntry(event){
+let removeEmployee = event.target.parentElement.parentElement;
+  removeEmployee.remove();
 }     
-//  <td>${monthlyCost}</td>
