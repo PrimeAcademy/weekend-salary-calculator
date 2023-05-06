@@ -5,43 +5,41 @@ let currentIndex = 0;
 function submitEmployee(event) {
     event.preventDefault();
 
-    let firstNameVal = document.querySelector('#first-name').value;
+    let firstNameVal = document.querySelector('#first-name');
     let lastNameVal = document.querySelector('#last-name').value;
     let IDVal = document.querySelector('#ID').value;
     let titleVal = document.querySelector('#title').value;
+    let annualSalaryVal = document.querySelector('#annual-salary').value;
 
-    let USDollar = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    })
-    let annualSalaryVal = parseFloat(document.querySelector('#annual-salary').value);
 
     let employeeTable = document.querySelector('#employeeData');
+
+    let annualSalaryValDisplay = parseFloat(annualSalaryVal).toLocaleString("en-US", {style:"currency", currency:"USD"})
    
 
-    employeeTable.innerHTML += `
-    <tr>
-        <td>${firstNameVal}</td>
+    employeeTable.innerHTML += 
+   ` <tr>
+        <td>${firstNameVal.value}</td>
         <td>${lastNameVal}</td>
         <td>${IDVal}</td>
         <td>${titleVal}</td>
-        <td class='total'>${annualSalaryVal}</td>
+        <td class='total'>${annualSalaryValDisplay}</td>
         <td><button onclick="deleteEmployee(this)" class="delete-employee">Delete</button></td>
-    </tr>
-    `
+    </tr>`;
+    
     currentIndex += 1;
     totalMonthly();
+
+    document.querySelector('#first-name').value = '';
+    document.querySelector('#last-name').value = '';
+    document.querySelector('#ID').value ='';
+    document.querySelector('#title').value='';
+    document.querySelector('#annual-salary').value='';
 }
 
 
 function deleteEmployee(event) {
-    // console.log(element);
-    // console.log(document.getElementsByClassName("row"));
-    // document.getElementsByClassName("row").deleteRow(currentIndex);
 
-
-    // console.log(event);
-    // console.log(event.closest('tr'));
     event.closest('tr').remove();
     totalMonthly();
 
@@ -52,7 +50,10 @@ function totalMonthly() {
     monthlyCost = 0;
     let array = document.getElementsByClassName("total");
     for (let row of array) {
-        monthlyCost += parseFloat(row.textContent);
+        let amount = Number(row.textContent.replace(/[^0-9.]+/g, ''))
+        console.log(amount);
+        monthlyCost += amount;
+
       
     }
    let element = document.querySelector('#total-monthly');
@@ -66,18 +67,8 @@ function totalMonthly() {
         style: 'currency',
         currency: 'USD',
     })
-    element.innerHTML = USDollar.format(monthlyCost);
-    
+    element.innerHTML = monthlyCost.toLocaleString("en-US", {style:"currency", currency:"USD"});
 }
 
 
 
-// X add element for total monthly cost
-// X calculate monthly costs from all employees - run when submitted
-// X change background of monthly cost to red if total cost exceeds $20k
-// clear input fields upon submit - each input is an object, target element set value to empty string
-// make 'enter' submit input field - wrap input/labels in a form element 'submit' and change 'onclick' to 'onsubmit'
-// STRETCH add styling
-// X STRETCH when employee is deleted updated total monthly cost to reflect - similar to finding total - on delete run a function to re-tally total
-// library.format string.replace 
-// Number(string.replace(/[^0-9.]+/g, '')); Number(string);
