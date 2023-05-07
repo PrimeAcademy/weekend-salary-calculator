@@ -52,6 +52,5 @@ submitbutton.addEventListener('click', submit);
 
 
 function deleteEntry(event){
-let removeEmployee = event.target.parentElement.parentElement;
-  removeEmployee.remove();
+event.target.parentElement.parentElement.remove();
 }     
