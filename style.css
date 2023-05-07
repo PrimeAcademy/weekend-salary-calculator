@@ -16,15 +16,10 @@ p {
 #Submit-Button {
    float: right;
 }
-/* #content { */
-    /* max-width: 700px; */
-    /* margin: 0 auto;
-    text-align: center;
-} */
 
 #customers {
     font-family: Arial, Helvetica, sans-serif;
-    /* border-collapse: collapse; */
+    
     width: 100%;
     text-align: center;
 }
