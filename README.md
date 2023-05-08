@@ -21,8 +21,6 @@ We were asked to calculate total monthly expenditure. To calculate this, each em
 
 ## Installation
 
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
 1. Install node.js 
 2. Initialize project, build out package.json file `npm init`
 3. Install express `npm install express`
@@ -41,8 +39,8 @@ How do you get your application up and running? This is a step by step list for 
 
 ## Built With
 
-Node.js
-Express
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
