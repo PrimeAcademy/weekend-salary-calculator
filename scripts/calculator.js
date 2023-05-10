@@ -36,7 +36,7 @@ function submitButton(event) {
       <td>${employee.lastName}</td>
       <td>${employee.idNumber}</td>
       <td>${employee.jobTitle}</td>
-      <td>$${employee.annualSalary.toFixed(2)}</td>
+      <td>$${employee.annualSalary}</td>
       <td><button class="DeleteButton">Delete</button></td>
   `;
 
