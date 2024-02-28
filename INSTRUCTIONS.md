@@ -133,6 +133,11 @@ This application should have a form with five inputs that collect a new employee
     - Accurately update the footer's total monthly cost when an employee is removed.
       - **Challenge:** Identify the removed employee's annual salary and adjust the total monthly cost accordingly. This requires careful consideration of how to associate each employee row with its corresponding salary data.
 
+- [ ] **Add an Express Server:**
+  - Add the [Express](https://www.npmjs.com/package/express) server package.
+  - Move your `salary data` to the server.
+  - Functionality should be the same on the DOM.
+  
 [🔝 back to top](#weekend-salary-calculator)
 
 ## About Unit Tests
