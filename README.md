@@ -2,7 +2,7 @@
 
 See the [Project Instructions](./INSTRUCTIONS.md) for instructions with completing the assignment.
 
-> **NOTE**: These lines can be removed once you update the README.md.
+> **NOTE**: These lines can be removed once you update the `README.md`.
 
 ## Description
 
