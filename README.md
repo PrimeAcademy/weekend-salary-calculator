@@ -1,6 +1,8 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+See the [Project Instructions](./INSTRUCTIONS.md) for instructions with completing the assignment.
+
+> **NOTE**: These lines can be removed once you update the README.md.
 
 ## Description
 
