@@ -118,6 +118,8 @@ This application should have a form with five inputs that collect a new employee
     - Removes the employee from the DOM.
     - **Note**: For the initial implementation, the total monthly cost **does not** need to be updated when an employee is deleted.
 
+> **NOTE**: You will see an empty [style.css](./style.css) file in your codebase. Put your styling here and add classes/ids to your HTML elements as you see fit!
+
 ## Stretch Goals
 
 - [ ] **Enhance Application Aesthetics or Functionality:**
