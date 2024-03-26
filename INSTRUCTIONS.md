@@ -70,12 +70,14 @@ Utilize the [Passing Criteria](#passing-criteria) for unit tests (below) to guar
 ## Local Setup
 
 - [ ] **Clone your Repo**:
+
   - Click the `<> Code` button in this repo and choose `SSH`.
   - Copy the URL. It should look something like: `git@github.com:YOUR-USERNAME/YOUR-REPO-NAME.git`.
   - In your terminal, navigate to the directory where you want to clone this repo.
   - Execute `git clone git@github.com:YOUR-USERNAME/YOUR-REPO-NAME.git`, replacing the placeholders with actual values.
 
 - [ ] **Install Node Dependencies**:
+
   - In the terminal, navigate to the folder you cloned this repo and run the following:
 
     ```sh
@@ -96,17 +98,19 @@ The UI should open in your chosen web browser to the correct URL.
 
 ## Requirements
 
-This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.
+This application should have a form with five inputs that collect a new employee's _first name, last name, ID number, job title, annual salary_.
 
 ### Base Mode
 
 - [ ] **Add a New Employee:**
+
   - When the "Submit" button is clicked:
     - A new `employee` row should be added to the table.
     - The footer element's total monthly cost should be updated.
     - The form inputs should be cleared out after adding an employee.
 
 - [ ] **Handle Monthly Cost Exceeding Budget:**
+
   - After updating the total monthly cost:
     - Check if the total monthly cost **exceeds $20,000**.
     - If it does, apply an `over-budget` CSS class to the footer element.
@@ -123,6 +127,7 @@ This application should have a form with five inputs that collect a new employee
 ## Stretch Goals
 
 - [ ] **Enhance Application Aesthetics or Functionality:**
+
   - Implement styling or additional features that complement the theme of the employee management application.
     - Suggestions include:
       - Adding animations to the form submission or employee deletion process.
@@ -131,6 +136,7 @@ This application should have a form with five inputs that collect a new employee
     - Creativity is highly encouraged!
 
 - [ ] **Update Monthly Cost on Employee Deletion:**
+
   - Modify the `Delete` button functionality to:
     - Accurately update the footer's total monthly cost when an employee is removed.
       - **Challenge:** Identify the removed employee's annual salary and adjust the total monthly cost accordingly. This requires careful consideration of how to associate each employee row with its corresponding salary data.
@@ -139,7 +145,7 @@ This application should have a form with five inputs that collect a new employee
   - Add the [Express](https://www.npmjs.com/package/express) server package.
   - Move your `salary data` to the server.
   - Functionality should be the same on the DOM.
-  
+
 [🔝 back to top](#weekend-salary-calculator)
 
 ## About Unit Tests
@@ -155,6 +161,7 @@ Nifty!
 ### Passing Criteria
 
 - **Submit Button Data-TestID:**
+
   - The submit button in your form **must** include the attribute `data-testid="submitButton"`, as shown below:
 
     ```html
@@ -162,6 +169,7 @@ Nifty!
     ```
 
 - **Form Input Data-TestIDs:**
+
   - Each input in your form must have a specific `data-testid` attribute to pass tests:
     - First Name: `data-testid="firstNameInput"`
     - Last Name: `data-testid="lastNameInput"`
@@ -170,9 +178,11 @@ Nifty!
     - Annual Salary: `data-testid="annualSalaryInput"`
 
 - **Employee Table Structure:**
+
   - Display employee information within a `<table>` element, ensuring each employee is listed in a separate `<tr>` row.
 
 - **Total Monthly Cost Display:**
+
   - The total monthly cost calculation must be displayed within the `<footer>` element of your application.
 
 - **Over-Budget Indicator:**
